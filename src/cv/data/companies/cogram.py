@@ -1,5 +1,7 @@
 from datetime import date
 
+from pydantic import HttpUrl
+
 from cv.models import Company, Position
 
 # Description prose synthesized from local Cogram repos and Cadu's merged PRs.
@@ -9,7 +11,7 @@ from cv.models import Company, Position
 COGRAM = Company(
     name="Cogram",
     one_liner="LLM-powered platform for the AECO industry",
-    url="https://www.cogram.com",
+    url=HttpUrl("https://www.cogram.com"),
     positions=(
         Position(
             title="Staff Software Engineer",

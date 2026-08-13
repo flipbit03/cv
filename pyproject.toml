@@ -77,6 +77,9 @@ disallow_untyped_decorators = true
 module = ["watchfiles.*"]
 ignore_missing_imports = true
 
+[tool.pydantic-mypy]
+init_typed = true
+
 [tool.pyright]
 include = ["src"]
 extraPaths = ["src"]

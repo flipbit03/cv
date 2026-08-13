@@ -1,3 +1,5 @@
+from pydantic import HttpUrl
+
 from cv.models import Personal
 
 PERSONAL = Personal(
@@ -5,8 +7,8 @@ PERSONAL = Personal(
     title="Staff Software Engineer · Backend · LLM Tooling · Infra",
     location="Rio de Janeiro, Brazil",
     email="cadu.coelho@gmail.com",
-    github="https://github.com/flipbit03",
-    linkedin="https://www.linkedin.com/in/carlos-eduardo-flipbit03/",
+    github=HttpUrl("https://github.com/flipbit03"),
+    linkedin=HttpUrl("https://www.linkedin.com/in/carlos-eduardo-flipbit03/"),
     summary="""
 Staff Software Engineer with extensive Linux fluency and a deep bench across Python, Rust, and C.
 I solve hard backend problems (distributed systems, data pipelines, async services, infra) and ship them with the testing, type safety,
